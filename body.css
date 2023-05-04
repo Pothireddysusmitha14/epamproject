@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body {
+ background-image: url("mak.jpg");
+ background-color: #cccccc;
+ background-repeat: no-repeat;
+ background-size: auto;
+}
+#parent {
+   display: table;
+   width: 100%;
+}
+#form_login {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}

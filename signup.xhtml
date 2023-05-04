@@ -1,0 +1,57 @@
+<HTML xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<HEAD>
+<TITLE>DATABASE ACCESS</TITLE>
+</HEAD>
+<body>
+<h3>Add User Details</h3>
+<h:form>
+<p>First Name:<h:inputText value="#{use.firstname}" /></p>
+<p>Last Name:<h:inputText value="#{use.lastname}" /></p>
+<p>Email:<h:inputText value="#{use.email}" /></p>
+<p>Date of Birth:<h:inputText value="#{use.dob}" /></p>
+<p>Phone Number:<h:inputText value="#{use.phonenumber}" /></p>
+<p>User Name:<h:inputText value="#{use.username}" /></p>
+<p>Password:<h:inputText value="#{use.password}" /></p>
+<p><h:outputLabel value="#{use.response}" /></p>
+<table>
+<tr>
+<td><h:commandButton action="#{use.save()}" value="SAVE"/></td>
+<td><h:commandButton action="#{use.update()}" value="UPDATE"/></td>
+<td><h:commandButton action="#{use.delete()}" value="DELETE"/></td>
+</tr>
+</table>
+<h3>User Table data</h3>
+<h:dataTable value="#{emp.list}" var="r">
+<h:column>
+<f:facet name="header">FirstName</f:facet>
+	#{r.firstname}
+</h:column>
+<h:column>
+<f:facet name="header">LastName</f:facet>
+	#{r.lastname}
+</h:column>
+<h:column>
+<f:facet name="header">Email</f:facet>
+	#{r.email}
+</h:column>
+<h:column>
+<f:facet name="header">DateOfBirth</f:facet>
+	#{r.dob}
+</h:column>
+<h:column>
+<f:facet name="header">PhoneNumber</f:facet>
+	#{r.phonenumber}
+</h:column>
+<h:column>
+<f:facet name="header">UserName</f:facet>
+	#{r.username}
+</h:column>
+<h:column>
+<f:facet name="header">Password</f:facet>
+	#{r.password}
+</h:column>
+</h:dataTable>
+</h:form>
+</body>
+</HTML>
